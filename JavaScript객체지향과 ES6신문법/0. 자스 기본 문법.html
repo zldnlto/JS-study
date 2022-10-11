@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>intro</title>
+  </head>
+  <body>
+    <p id="hello">1.innerHTML : html의 변경을 위해 쓰는거임</p>
+    <button id="button">2. HTML누르면 뭐 실행하고 싶을 때 이벤트리스너</button>
+    <p>3. 잠깐 자료 저장해두고 싶으면 변수 만들어서 쓰셈</p>
+    <p>4. 코드 긴거 짧게 축약하려면 함수 만들어 쓰셈</p>
+    <p>5. 함수 다양하게 쓰려면 파라미터로 업그레이드</p>
+    <p>6. 자료 한번에 여러개 저장하려면 array, object</p>
+    <p>7. 코드 조건부로 실행하고 싶을 때 if/else</p>
+    <p>8. 반복되는 코드를 줄이고 싶을 떄 for 반복문</p>
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        작명("바보");
+      });
+      document.getElementById("hello").innerHTML = "바보";
+      let name = "kim";
+      const age = 20;
+
+      function 작명(파라미터, 파라미터2) {
+        document.getElementById("hello").innerHTML = 파라미터;
+      }
+
+      let nameArr = ["kim", "park"];
+      name[0]; //"kim"
+      let nameObj = { name: "kim", age: "20" };
+      name["age"]; //20
+      name.age; //20
+
+      if (1 == 1 || 2 == 2) {
+        console.log("안녕");
+      } else {
+        console.log("잘가");
+      }
+      //8.
+      for (var i = 0; i < 3; i++) {
+        console.log("안녕");
+      }
+
+      [1, 2, 3, 4].forEach(function () {
+        console.log("데이터 개수만큼 반복");
+      });
+    </script>
+  </body>
+</html>
