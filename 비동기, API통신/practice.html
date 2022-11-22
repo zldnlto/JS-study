@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title></title>
+  </head>
+  <body>
+    <script>
+      const loadPokemon = async () => {
+        try {
+          const res = fetch("https://pokeapi.co/api/v2/pokemon/ditto"); //변수에 담기
+          console.log(res.ok); //이중체크
+          const pokemonData = res.json(); //json으로 만들기
+          return pokemonData;
+        } catch {
+          console.log("error");
+        }
+      };
+
+      loadPokemon().then((data) => console.log(data));
+
+      //https://pokeapi.co/api/v2/pokemon/ditto
+    </script>
+  </body>
+</html>
